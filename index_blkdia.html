@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>BLACK DIAMOND</title>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: black;
+      color: #00ffcc;
+      font-family: 'Share Tech Mono', monospace;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+    h1 {
+      font-size: 3rem;
+      letter-spacing: 6px;
+    }
+    .warning {
+      margin-top: 10px;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+    button {
+      margin-top: 30px;
+      background: none;
+      border: 1px solid #00ffcc;
+      padding: 10px 20px;
+      color: #00ffcc;
+      font-family: inherit;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #00ffcc;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>BLACK DIAMOND</h1>
+  <div class="warning">The diamond cuts as sharp as it shines.</div>
+  <button onclick="q1()">Access</button>
+
+  <script>
+    // [Obfuscated password check — do not touch]
+
+    function q1() {
+      let r = prompt("access protocol // code?");
+      let x = r.split('').map(c => c.charCodeAt(0).toString(16)).join('-');
+      let p = "73-68-65-65-70-5f-76-65-63-74-6f-72-35-36"; // sheep_vector56 encoded
+      if (x === p) {
+        location.href = atob("bWFpbmZyYW1lX2Jsa2RpYS5odG1s"); // "mainframe_blkdia.html"
+      } else {
+        alert("⚠ ACCESS REJECTED ⚠");
+      }
+    }
+  </script>
+
+</body>
+</html>

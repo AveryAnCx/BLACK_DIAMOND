@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>mainframe ∴ BLACK DIAMOND</title>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+      color: #00ffcc;
+      font-family: 'Share Tech Mono', monospace;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      letter-spacing: 3px;
+    }
+    .nav-btn {
+      background: none;
+      border: 1px solid #00ffcc;
+      color: #00ffcc;
+      padding: 12px 25px;
+      margin: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      text-transform: uppercase;
+    }
+    .nav-btn:hover {
+      background: #00ffcc;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>mainframe access level — classified</h2>
+
+  <button class="nav-btn" onclick="x('SAGE','62657277796e76693334','c2FnZV9ibGtkaWEuaHRtbA==')">SAGE</button>
+  <button class="nav-btn" onclick="x('INITIATE','6164787465725f6932','aW5pdGlhdGVfYmxrZGlhLmh0bWw=')">INITIATE</button>
+  <button class="nav-btn" onclick="x('CHEMISTRY','62623472756b','Y2hlbV9ibGtkaWEuaHRtbA==')">CHEMISTRY</button>
+
+  <script>
+    function x(l, k, d) {
+      let p = prompt("Access node: " + l);
+      let h = [...p].map(c => c.charCodeAt(0).toString(16)).join('');
+      if (h === k) {
+        location.href = atob(d);
+      } else {
+        alert("DENIED [" + l + "]");
+      }
+    }
+  </script>
+
+</body>
+</html>
